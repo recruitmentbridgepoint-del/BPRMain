@@ -1,0 +1,11 @@
+name = "bprmain"
+main = "bridgepoint-site/src/worker.js"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./bridgepoint-site/public/"
+binding = "ASSETS"
+run_worker_first = ["/api/*", "/jobpostings/*", "/careers", "/job-seekers", "/employers", "/about-us", "/contact", "/blog"]
+
+[[send_email]]
+name = "EMAIL"

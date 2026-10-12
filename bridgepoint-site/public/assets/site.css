@@ -74,7 +74,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--b);outline-offse
 @media (max-width:980px){.links,.right a{display:none}.burger{display:block}.foot__top{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){
   .in{padding:0 16px}
-  .logo{font-size:10px;letter-spacing:.18em}.logo img{height:26px}
+  .logo{font-size:12.5px;letter-spacing:.16em}.logo img{height:30px}
   .formcard{padding:22px}.fgrid{grid-template-columns:1fr}
   .foot__top{grid-template-columns:1fr}
 }

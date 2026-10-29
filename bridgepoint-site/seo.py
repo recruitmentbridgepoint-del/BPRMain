@@ -33,13 +33,16 @@ def job_ld(j):
           "description": "<p>" + "</p><p>".join(html.escape(p) for p in [j["summary"]] + j["about"]) + "</p><ul>" +
                          "".join(f"<li>{html.escape(d)}</li>" for d in j["duties"] + j["reqs"]) + "</ul>",
           "identifier": {"@type": "PropertyValue", "name": "Bridgepoint Recruitment", "value": j["ref"]},
-          "datePosted": POSTED, "employmentType": "FULL_TIME",
+          "datePosted": j.get("posted", POSTED), "employmentType": "FULL_TIME",
           "hiringOrganization": {"@type": "Organization", "name": "Bridgepoint Recruitment", "sameAs": SITE + "/", "logo": SITE + "/images/mark-black.png"},
           "jobLocation": {"@type": "Place", "address": addr}, "directApply": True}
-    m = re.match(r"\$([\d,]+)", j["salary"])
+    m = re.match(r"\$([\d,.]+)", j["salary"])
     if m:
+        hourly = "/hr" in j["salary"] or "per hour" in j["salary"]
+        amount = float(m.group(1).replace(",", ""))
         ld["baseSalary"] = {"@type": "MonetaryAmount", "currency": "AUD",
-                            "value": {"@type": "QuantitativeValue", "value": int(m.group(1).replace(",", "")), "unitText": "YEAR"}}
+                            "value": {"@type": "QuantitativeValue", "value": int(amount) if amount.is_integer() else amount,
+                                      "unitText": "HOUR" if hourly else "YEAR"}}
     return ld
 
 def crumbs(items):

@@ -5,7 +5,34 @@ import redirects from "./redirects.json";
 
 const TO = "info@bridgepointrecruitment.com";       // where every form is delivered
 const FROM = "website@bridgepointrecruitment.com";  // sender; domain must be set up in Cloudflare Email
-const MAX_FILE = 4 * 1024 * 1024;                   // Email Service limit is 5 MiB per message in total
+const MAX_FILE = 4 * 1024 * 1024;                   // keeps uploads small; Resend allows up to 40MB per email
+
+// Base64-encode an ArrayBuffer (Resend expects attachment content as a Base64 string)
+function toBase64(buf) {
+  const bytes = new Uint8Array(buf);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
+// Send through Resend (https://resend.com). The API key is stored as a secret named RESEND_API_KEY.
+async function sendEmail(env, m) {
+  const body = {
+    from: `${m.from.name} <${m.from.email}>`,
+    to: [m.to],
+    subject: m.subject,
+    html: m.html,
+    text: m.text,
+  };
+  if (m.replyTo) body.reply_to = m.replyTo;
+  if (m.attachments) body.attachments = m.attachments.map((a) => ({ filename: a.filename, content: toBase64(a.content) }));
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`Resend ${res.status}: ${await res.text()}`);
+}
 
 const FORMS = {
   "/api/brief": {
@@ -69,7 +96,7 @@ async function handleForm(request, env, form) {
   }
 
   try {
-    await env.EMAIL.send(message);
+    await sendEmail(env, message);
   } catch (err) {
     console.error("Email send failed", err);
     return back(request.url, `error=send&f=${form.thanks}`);

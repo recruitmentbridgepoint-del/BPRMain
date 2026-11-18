@@ -63,9 +63,13 @@
   const q=new URLSearchParams(location.search),f=q.get('f'),e=q.get('error');
   const msg={brief:["Brief received","A consultant will contact you to confirm the role, timing and fees. Suitable candidate profiles are shared within 24 hours."],
              apply:["Application received","Thank you for applying. A consultant will contact you if your experience matches the role."],
-             register:["Resume registered","We will contact you when a role that fits your experience comes in."]};
+             register:["Resume registered","We will contact you when a role that fits your experience comes in."],
+             onboard:["Step 1 complete","Bridgepoint will now send you an email from Xero, our payroll system. Open it and enter your tax file number declaration, super fund and bank details. Bridgepoint cannot pay you until this is complete."]};
   const err={size:"Your resume is larger than 4 MB. Please reduce the file size and try again.",type:"Please upload your resume as a PDF or Word document.",
-             send:"Your details could not be sent. Please try again, or call us on (02) 9248 7294.",1:"Some required details were missing. Please go back and complete the form."};
+             send:"Your details could not be sent. Please try again, or call us on (02) 9248 7294.",1:"Some required details were missing. Please go back and complete the form.",
+             code:"The onboarding code is incorrect. Please go back and check the code Bridgepoint sent you.",closed:"Onboarding is not open. Please call us on (02) 9248 7294.",
+             missing:"Some required details were missing. Please go back and complete the form.",docsize:"Each document must be 8 MB or smaller.",doctype:"Please upload documents as PDF, JPG, PNG or HEIC files.",
+             save:"Your details could not be saved. Please try again, or call us on (02) 9248 7294."};
   if(e){document.getElementById('t').textContent='Something went wrong';document.getElementById('m').textContent=err[e]||err[1];
         document.querySelector('#ok svg').style.display='none';}
   else if(msg[f]){document.getElementById('t').textContent=msg[f][0];document.getElementById('m').textContent=msg[f][1];}

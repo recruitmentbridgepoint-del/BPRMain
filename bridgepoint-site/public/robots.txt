@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /thanks/
 Disallow: /api/
+Disallow: /onboarding/
+Disallow: /staff-admin
 
 Sitemap: https://bridgepointrecruitment.com/sitemap.xml

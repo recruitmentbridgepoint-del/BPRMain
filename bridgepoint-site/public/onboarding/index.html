@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff onboarding | Bridgepoint Recruitment</title>
+<!-- seo -->
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://bridgepointrecruitment.com/onboarding/">
+<meta name="robots" content="noindex">
+<meta property="og:site_name" content="Bridgepoint Recruitment">
+<meta property="og:locale" content="en_AU">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bridgepointrecruitment.com/onboarding/">
+<meta property="og:title" content="Staff onboarding | Bridgepoint Recruitment">
+<meta property="og:description" content="Onboarding form for new Bridgepoint Recruitment staff.">
+<meta property="og:image" content="https://bridgepointrecruitment.com/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#23414f">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<!-- /seo -->
+<meta name="description" content="Onboarding form for new Bridgepoint Recruitment staff.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.ob__intro{padding-top:46px;max-width:860px;margin:0 auto}
+.ob__intro h1{margin-top:12px}
+.ob__intro .lead{margin-top:12px}
+.ob__body{padding-top:30px;padding-bottom:80px;max-width:860px;margin:0 auto}
+.ob fieldset{border:0;padding:26px 0;border-bottom:1px solid var(--line)}
+.ob fieldset:first-of-type{padding-top:0}
+.ob legend{float:left;width:100%;display:flex;align-items:center;gap:12px;font-size:17px;font-weight:600;letter-spacing:-.01em;margin-bottom:16px;padding:0}
+.ob legend b{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--a);font-size:13px}
+.ob legend+*{clear:both}
+.ob .chk span{color:inherit;font-weight:400}
+.ob .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ob .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;line-height:1.5;margin:0}
+.ob .chk input{width:18px;height:18px;flex:none;margin-top:1px;accent-color:var(--a)}
+.ob .radios,.ob .decl{display:grid;gap:12px}
+.ob .days{display:flex;flex-wrap:wrap;gap:8px}
+.ob .days .chk{align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.ob .note{background:var(--soft);border-radius:12px;padding:16px 18px;margin-bottom:16px;font-size:13.5px;color:#33434b;line-height:1.6}
+.ob .note ol{padding-left:20px;margin:8px 0}
+.ob .hint{font-size:12.5px;color:var(--muted)}
+.ob a.u{border-bottom:1px solid var(--line);color:var(--a)}
+.ob .err{margin-top:18px;padding:12px 14px;border-radius:8px;background:#fbeaea;color:#8a2323;font-size:13.5px}
+.ob .step2 h2{margin-top:0;font-size:26px}
+.ob .step2 .lead{margin-top:12px;max-width:none}
+.ob .step2 ol{margin:18px 0 0 20px;display:grid;gap:10px;font-size:14.5px;line-height:1.55}
+.ob .step2 .hint{margin-top:18px}
+.ob .cta:disabled{opacity:.6;cursor:wait}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a class="logo" href="/"><img decoding="async" src="/images/mark-black.png" alt="">Bridgepoint Recruitment</a>
+    <nav class="links" aria-label="Main"><a href="/#sectors">Sectors</a><a href="/#how">How it works</a><a href="/#guarantee">Guarantee</a><a href="/#services">Services</a><a href="/jobs">Jobs</a></nav>
+    <div class="right"><a href="tel:+61292487294">(02) 9248 7294</a><a class="cta cta--sm" href="/#brief">Brief us on a role</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" id="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h18M3 16h18"/></svg></button></div>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Mobile"><a href="/#sectors">Sectors</a><a href="/#how">How it works</a><a href="/#guarantee">Guarantee</a><a href="/#services">Services</a><a href="/jobs">Jobs</a><a href="/#brief">Brief us on a role</a></nav>
+</header>
+
+<main class="ob">
+<section class="in ob__intro">
+  <p class="meta"><span id="stepno">Step 1 of 2</span><i></i><span>New starters</span></p>
+  <h1>Staff onboarding</h1>
+  <p class="lead" id="introlead">Complete this form before your first shift. It takes approximately 10 minutes. You will need your onboarding code and photo ID. Step 2 is your tax, super and bank details, completed in Xero, our payroll system.</p>
+</section>
+
+<section class="in ob__body">
+<form class="formcard" id="ob" action="/api/onboarding" method="post" enctype="multipart/form-data" novalidate>
+  <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
+  <fieldset>
+    <legend><b>1</b> Onboarding code</legend>
+    <div class="fgrid">
+      <div class="full"><label for="code">Code <span>(sent to you by Bridgepoint)</span></label><input id="code" name="code" required autocomplete="off"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>2</b> Personal details</legend>
+    <div class="fgrid">
+      <div><label for="given_names">Given name(s)</label><input id="given_names" name="given_names" required autocomplete="given-name"></div>
+      <div><label for="surname">Surname</label><input id="surname" name="surname" required autocomplete="family-name"></div>
+      <div><label for="preferred_name">Preferred name <span>(optional)</span></label><input id="preferred_name" name="preferred_name"></div>
+      <div><label for="mobile">Mobile</label><input id="mobile" name="mobile" type="tel" required autocomplete="tel"></div>
+      <div><label for="email">Email <span>(your Xero payroll invitation is sent here)</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>3</b> Emergency contact</legend>
+    <div class="fgrid">
+      <div><label for="ec_name">Full name</label><input id="ec_name" name="ec_name" required></div>
+      <div><label for="ec_relationship">Relationship to you</label><input id="ec_relationship" name="ec_relationship" required></div>
+      <div><label for="ec_phone">Phone</label><input id="ec_phone" name="ec_phone" type="tel" required></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>4</b> Right to work in Australia</legend>
+    <div class="fgrid">
+      <div class="full"><label for="work_status">Status</label>
+        <select id="work_status" name="work_status" required>
+          <option value="">Select</option><option>Australian citizen</option><option>Australian permanent resident</option><option>New Zealand citizen</option><option>Visa holder</option>
+        </select></div>
+      <div class="visa"><label for="passport_no">Passport number</label><input id="passport_no" name="passport_no"></div>
+      <div class="visa"><label for="passport_country">Passport country</label><input id="passport_country" name="passport_country"></div>
+      <div class="visa"><label for="visa_subclass">Visa subclass <span>(e.g. 417, 500)</span></label><input id="visa_subclass" name="visa_subclass"></div>
+      <div class="visa"><label for="visa_expiry">Visa expiry date</label><input id="visa_expiry" name="visa_expiry" type="date"></div>
+      <div class="full visa"><label class="chk"><input type="checkbox" name="vevo_consent" value="Yes"><span>I consent to Bridgepoint checking my visa work rights through the Department of Home Affairs VEVO service.</span></label></div>
+      <div class="full"><label for="id_doc">Photo ID <span>(passport, or driver licence for Australian citizens. PDF, JPG, PNG or HEIC, max 8 MB)</span></label><input id="id_doc" name="id_doc" type="file" required accept=".pdf,.jpg,.jpeg,.png,.heic"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>5</b> Availability and work details</legend>
+    <div class="fgrid">
+      <div class="full"><label>Days available</label>
+        <div class="days">
+          <label class="chk"><input type="checkbox" name="days" value="Mon"><span>Mon</span></label><label class="chk"><input type="checkbox" name="days" value="Tue"><span>Tue</span></label><label class="chk"><input type="checkbox" name="days" value="Wed"><span>Wed</span></label><label class="chk"><input type="checkbox" name="days" value="Thu"><span>Thu</span></label><label class="chk"><input type="checkbox" name="days" value="Fri"><span>Fri</span></label><label class="chk"><input type="checkbox" name="days" value="Sat"><span>Sat</span></label><label class="chk"><input type="checkbox" name="days" value="Sun"><span>Sun</span></label>
+        </div></div>
+      <div class="full"><label for="availability_notes">Availability notes <span>(optional: times, other commitments)</span></label><input id="availability_notes" name="availability_notes"></div>
+      <div><label for="transport">Getting to work</label><select id="transport" name="transport" required><option value="">Select</option><option>Own car</option><option>Public transport</option><option>Other</option></select></div>
+      <div><label for="driver_licence">Driver licence</label><select id="driver_licence" name="driver_licence" required><option value="">Select</option><option>Full</option><option>Provisional</option><option>Learner</option><option>None</option></select></div>
+      <div class="full"><label for="licences">Other licences or tickets <span>(optional: e.g. forklift LF, first aid, with expiry dates)</span></label><input id="licences" name="licences"></div>
+      <div><label for="boot_size">Safety boot size <span>(AU)</span></label><input id="boot_size" name="boot_size" required></div>
+      <div><label for="shirt_size">Hi-vis shirt size</label><select id="shirt_size" name="shirt_size" required><option value="">Select</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option></select></div>
+      <div class="full"><label for="adjustments">Adjustments <span>(optional)</span></label><textarea id="adjustments" name="adjustments" placeholder="Is there anything Bridgepoint should know so you can safely perform the role, such as a workplace adjustment you need?"></textarea></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><b>6</b> Declarations</legend>
+    <div class="fgrid">
+      <div class="full decl">
+        <label class="chk"><input type="checkbox" name="ack_fwis" value="Yes" required><span>I have received and read the <a class="u" href="https://www.fairwork.gov.au/fwis" target="_blank" rel="noopener">Fair Work Information Statement</a>.</span></label>
+        <label class="chk"><input type="checkbox" name="ack_ceis" value="Yes" required><span>I have received and read the <a class="u" href="https://www.fairwork.gov.au/ceis" target="_blank" rel="noopener">Casual Employment Information Statement</a>.</span></label>
+        <label class="chk"><input type="checkbox" name="ack_privacy" value="Yes" required><span>I understand Bridgepoint collects this information to employ and pay me, meet tax, superannuation and workplace law obligations, and confirm my right to work. My name, licences, availability and PPE sizes may be shared with the business where I am placed. My tax, bank and ID details will not be shared with that business. See the <a class="u" href="/privacy" target="_blank">privacy policy</a>.</span></label>
+        <label class="chk"><input type="checkbox" name="ack_true" value="Yes" required><span>The information I have given is true and correct.</span></label>
+      </div>
+      <div class="full"><label for="signature">Full name <span>(typed as your signature)</span></label><input id="signature" name="signature" required></div>
+    </div>
+  </fieldset>
+
+  <p class="err" id="err" role="alert" hidden></p>
+  <button class="cta" type="submit" id="go">Continue to step 2</button>
+  <p class="fine">Your details are sent over an encrypted connection and stored securely. They are not emailed.</p>
+</form>
+<div class="formcard step2" id="step2" hidden>
+  <h2>Tax, super and bank details</h2>
+  <p class="lead">Step 1 is complete. Bridgepoint will now send you an invitation from Xero, our payroll system, to <b id="em"></b>.</p>
+  <ol>
+    <li>Open the email from Xero. Check your junk folder if it has not arrived within one business day.</li>
+    <li>Follow the link and enter your tax file number declaration, super fund and bank account details.</li>
+    <li>Submit the Xero form. Bridgepoint cannot pay you until it is complete.</li>
+  </ol>
+  <p class="hint">If the email has not arrived, call (02) 9248 7294 or email info@bridgepointrecruitment.com.</p>
+</div>
+
+</section>
+</main>
+<script>
+(function(){
+  const f=document.getElementById('ob'),err=document.getElementById('err'),go=document.getElementById('go');
+  const ws=document.getElementById('work_status');
+  function show(sel,on){document.querySelectorAll(sel).forEach(el=>{el.style.display=on?'':'none';el.querySelectorAll('input').forEach(i=>{if(i.type!=='checkbox')i.required=on;});});}
+  function upd(){
+    const v=ws.value==='Visa holder';show('.visa',v);
+    const vc=f.querySelector('[name=vevo_consent]');vc.required=v;
+  }
+  f.addEventListener('change',upd);upd();
+  const msgs={code:'The onboarding code is incorrect. Check the code Bridgepoint sent you.',closed:'Onboarding is not open. Contact Bridgepoint on (02) 9248 7294.',
+    docsize:'Each file must be 8 MB or smaller.',doctype:'Upload documents as PDF, JPG, PNG or HEIC files.',missing:'Some required details are missing.',
+    save:'Your details could not be saved. Please try again, or call (02) 9248 7294.'};
+  function fail(m){err.textContent=m;err.hidden=false;err.scrollIntoView({block:'center',behavior:'smooth'});go.disabled=false;go.textContent='Continue to step 2';}
+  f.addEventListener('submit',async e=>{
+    e.preventDefault();err.hidden=true;
+    if(!f.checkValidity()){const bad=f.querySelector(':invalid');fail('Please complete: '+((bad.closest('div')||bad).querySelector('label')||{textContent:'required fields'}).textContent.trim());bad.focus();return;}
+    for(const i of f.querySelectorAll('input[type=file]'))if(i.files[0]&&i.files[0].size>8*1024*1024)return fail(msgs.docsize);
+    go.disabled=true;go.textContent='Submitting…';
+    try{
+      const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'X-Requested-With':'fetch'}});
+      const j=await r.json();
+      if(j.ok){document.getElementById('em').textContent=f.email.value;f.hidden=true;const s2=document.getElementById('step2');s2.hidden=false;document.getElementById('stepno').textContent='Step 2 of 2';document.getElementById('introlead').hidden=true;window.scrollTo({top:0,behavior:'smooth'});return;}
+      fail(msgs[j.error]||msgs.save);
+    }catch(x){fail(msgs.save);}
+  });
+})();
+</script>
+
+<footer class="foot">
+  <div class="in">
+    <div class="foot__top">
+      <div class="foot__brand"><img decoding="async" src="/images/mark-white.png" alt=""><p>Bridgepoint Recruitment</p></div>
+      <div><h4>Employers</h4><ul><li><a href="/#brief">Brief us on a role</a></li><li><a href="/#services">Services</a></li><li><a href="/#guarantee">Our guarantee</a></li><li><a href="/#faq">FAQ</a></li></ul></div>
+      <div><h4>Job seekers</h4><ul><li><a href="/jobs">Search jobs</a></li><li><a href="/jobs#register">Register your resume</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+61292487294">(02) 9248 7294</a></li><li><a href="mailto:info@bridgepointrecruitment.com">info@bridgepointrecruitment.com</a></li><li>55 Pyrmont Bridge Road<br>Pyrmont NSW 2009</li><li>Mon–Fri 8am–5pm &middot; Sat 10am–3pm</li></ul></div>
+    </div>
+    <div class="foot__base"><span>&copy; 2026 Bridgepoint Recruitment</span><span><a href="/privacy">Privacy policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of business</a></span></div>
+  </div>
+</footer>
+<script>
+  const bg=document.getElementById('burger'),dr=document.getElementById('drawer');
+  bg.addEventListener('click',()=>{const o=dr.classList.toggle('open');bg.setAttribute('aria-expanded',o);});
+</script>
+</body>
+</html>
